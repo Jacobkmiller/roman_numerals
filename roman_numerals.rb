@@ -1,6 +1,7 @@
-class RomanNumeral
-  def initialize(remainder)
-    @value = ''
+class Integer
+  def to_roman
+    result = ''
+    remainder = self
 
     numerals = {
       'M' => 1000,
@@ -19,12 +20,12 @@ class RomanNumeral
     }
 
     numerals.each do |numeral, val|
-      while remainder / val >= 1
-        @value += numeral
-        remainder -= val
-      end
+      next unless remainder / val >= 1
+      quantity = (remainder / val).round
+      result << numeral * quantity
+      remainder -= (val * quantity)
     end
-  end
 
-  attr_reader :value
+    result
+  end
 end

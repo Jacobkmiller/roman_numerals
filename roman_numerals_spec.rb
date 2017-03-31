@@ -1,56 +1,43 @@
 require_relative 'roman_numerals'
 
-describe RomanNumeral do
+describe Integer do
   it '1 should become I' do
-    numeral = RomanNumeral.new(1)
-    expect(numeral.value).to eq('I')
+    expect(1.to_roman).to eq('I')
   end
   it '4 should become IV' do
-    numeral = RomanNumeral.new(4)
-    expect(numeral.value).to eq('IV')
+    expect(4.to_roman).to eq('IV')
   end
   it '5 should become V' do
-    numeral = RomanNumeral.new(5)
-    expect(numeral.value).to eq('V')
+    expect(5.to_roman).to eq('V')
   end
   it '9 should become IX' do
-    numeral = RomanNumeral.new(9)
-    expect(numeral.value).to eq('IX')
+    expect(9.to_roman).to eq('IX')
   end
   it '10 should become X' do
-    numeral = RomanNumeral.new(10)
-    expect(numeral.value).to eq('X')
+    expect(10.to_roman).to eq('X')
   end
   it '40 should become XL' do
-    numeral = RomanNumeral.new(40)
-    expect(numeral.value).to eq('XL')
+    expect(40.to_roman).to eq('XL')
   end
   it '50 should become L' do
-    numeral = RomanNumeral.new(50)
-    expect(numeral.value).to eq('L')
+    expect(50.to_roman).to eq('L')
   end
   it '90 should become XC' do
-    numeral = RomanNumeral.new(90)
-    expect(numeral.value).to eq('XC')
+    expect(90.to_roman).to eq('XC')
   end
   it '100 should become C' do
-    numeral = RomanNumeral.new(100)
-    expect(numeral.value).to eq('C')
+    expect(100.to_roman).to eq('C')
   end
   it '400 should become CD' do
-    numeral = RomanNumeral.new(400)
-    expect(numeral.value).to eq('CD')
+    expect(400.to_roman).to eq('CD')
   end
   it '500 should become D' do
-    numeral = RomanNumeral.new(500)
-    expect(numeral.value).to eq('D')
+    expect(500.to_roman).to eq('D')
   end
   it '900 should become D' do
-    numeral = RomanNumeral.new(900)
-    expect(numeral.value).to eq('CM')
+    expect(900.to_roman).to eq('CM')
   end
   it '1000 should become M' do
-    numeral = RomanNumeral.new(1000)
-    expect(numeral.value).to eq('M')
+    expect(1000.to_roman).to eq('M')
   end
 end
