@@ -5,68 +5,52 @@ describe RomanNumeral do
     numeral = RomanNumeral.new(1)
     expect(numeral.value).to eq('I')
   end
-  it '1 should becom I' do
-    numeral = RomanNumeral.new(2)
-    expect(numeral.value).to eq('II')
-  end
-  it '1 should becom I' do
-    numeral = RomanNumeral.new(3)
-    expect(numeral.value).to eq('III')
-  end
-  it '1 should becom I' do
+  it '4 should becom IV' do
     numeral = RomanNumeral.new(4)
     expect(numeral.value).to eq('IV')
   end
-  it '1 should becom I' do
+  it '5 should becom V' do
     numeral = RomanNumeral.new(5)
     expect(numeral.value).to eq('V')
   end
-  it '1 should becom I' do
-    numeral = RomanNumeral.new(7)
-    expect(numeral.value).to eq('VII')
-  end
-  it '1 should becom I' do
+  it '9 should becom IX' do
     numeral = RomanNumeral.new(9)
     expect(numeral.value).to eq('IX')
   end
-  it '1 should becom I' do
+  it '10 should becom X' do
     numeral = RomanNumeral.new(10)
     expect(numeral.value).to eq('X')
   end
-  it '1 should becom I' do
-    numeral = RomanNumeral.new(20)
-    expect(numeral.value).to eq('XX')
-  end
-  it '1 should becom I' do
-    numeral = RomanNumeral.new(29)
-    expect(numeral.value).to eq('XXIX')
-  end
-  it '1 should becom I' do
+  it '40 should becom XL' do
     numeral = RomanNumeral.new(40)
     expect(numeral.value).to eq('XL')
   end
-  it '1 should becom I' do
-    numeral = RomanNumeral.new(44)
-    expect(numeral.value).to eq('XLIV')
-  end
-  it '1 should becom I' do
+  it '50 should becom L' do
     numeral = RomanNumeral.new(50)
     expect(numeral.value).to eq('L')
   end
-  it '1 should becom I' do
-    numeral = RomanNumeral.new(60)
-    expect(numeral.value).to eq('LX')
+  it '90 should becom XC' do
+    numeral = RomanNumeral.new(90)
+    expect(numeral.value).to eq('XC')
   end
-  it '1 should becom I' do
-    numeral = RomanNumeral.new(74)
-    expect(numeral.value).to eq('LXXIV')
-  end
-  it '1 should becom I' do
-    numeral = RomanNumeral.new(99)
-    expect(numeral.value).to eq('XCIX')
-  end
-  it '1 should becom I' do
+  it '100 should becom C' do
     numeral = RomanNumeral.new(100)
     expect(numeral.value).to eq('C')
+  end
+  it '400 should becom CD' do
+    numeral = RomanNumeral.new(400)
+    expect(numeral.value).to eq('CD')
+  end
+  it '500 should becom D' do
+    numeral = RomanNumeral.new(500)
+    expect(numeral.value).to eq('D')
+  end
+  it '900 should becom D' do
+    numeral = RomanNumeral.new(900)
+    expect(numeral.value).to eq('CM')
+  end
+  it '1000 should becom M' do
+    numeral = RomanNumeral.new(1000)
+    expect(numeral.value).to eq('M')
   end
 end
